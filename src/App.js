@@ -20,9 +20,7 @@ const data=await response.json();
 setMovies(data.Search);
 
     }
-  useEffect(()=>{
-    searchMovies('Batman');
-  },[]);
+  
 return(
   <div className="app">
   <h1>MovieCentral</h1>
