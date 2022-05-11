@@ -5,11 +5,11 @@ import './search.svg';
 import SearchIcon from "./search.svg";
 
 import MovieCard from "./MovieCard"
-const movie1 ={Poster: "https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+/*const movie1 ={Poster: "https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
 Title: "Batman Begins",
 Type: "movie",
 Year: "2005",
-imdbID: "tt0372784"};
+imdbID: "tt0372784"};*/
 const API_URL ='http://www.omdbapi.com?apikey=34df11c5';
 const App = ()=>{
 const [movies,setMovies]= useState([]);
@@ -28,7 +28,7 @@ return(
   <h1>MovieCentral</h1>
   <div className="search">
   <input
-  placeholder="search for movies"
+  placeholder="search for movies and games"
   value={searchTerm}
   onChange={(e)=> setSearchTerm(e.target.value)}
   />
@@ -39,9 +39,7 @@ return(
    />
    </div>
    {
-   movies?.length>0
-   ?
-   (
+   movies?.length > 0 ?(
      <div className="container">
 {movies.map((movie)=>(<MovieCard movie ={movie}/>))}
    </div>
