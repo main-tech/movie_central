@@ -6,7 +6,7 @@ import SearchIcon from "./search.svg";
 
 import MovieCard from "./MovieCard"
 
-const API_URL ="http://www.omdbapi.com?apikey=34df11c5";
+const API_URL ="https://www.omdbapi.com?apikey=34df11c5";
 
 const App = ()=>{
 const [movies,setMovies]= useState([]);
@@ -26,7 +26,7 @@ setMovies(data.Search);
   
 return(
     <div className="app">
-      <h1>MovieLand</h1>
+      <h1>Movie Central</h1>
 
       <div className="search">
         <input
